@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Enter Servers IP address and credentials</h1>
+  <form action="/results" method="POST">
+  <fieldset>
+  <legend>SSH Remote machine and show processes:</legend>
+  Server IP:<br>
+  <input type="text" name="server"><br><br>
+  SSH Username:<br>
+  <input type="text" name="username"><br><br>
+  SSH Password:<br>
+  <input type="password" name="password"><br><br>
+  
+  <input type="submit" value="Submit">
+  </fieldset>
+  </form>
+    
+{% endblock %}

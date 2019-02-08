@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Results page</h1>
+   
+    <div><p> Results are fetched with ssh username: {{ username }} <b></b></p></div>
+
+    <h2>Current processes on server {{ server }}</h2>
+
+<table>
+
+      <th> COMMAND </th>
+      <th> USER </th>
+      <th> PID </th>
+      <th> %CPU </th>
+      <th> %MEM </th>
+  </tr>
+
+{% for ROW in finallist %}
+  <tr>
+      <td> {{ ROW.ccommand }}</td>
+      <td> {{ ROW.uuser }}</td>
+      <td> {{ ROW.ppid }}</td>
+      <td> {{ ROW.ccpu }}</td>
+      <td> {{ ROW.mmem }}</td>
+  </tr>
+{% endfor %}
+</table>
+   
+{% endblock %}
