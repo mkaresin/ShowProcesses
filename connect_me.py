@@ -23,13 +23,13 @@ def connectMe (hostname, port, username, password):
 __version__ = '0.1'
 
 if __name__ == '__main__':
-  #result = connectMe('192.168.5.13', '22', 'em', 'bubble-sortq')
+  #result = connectMe('enterip', 'enterport', 'username', 'pass')
   
   #print "result: \n" 
   #print result
   #mylist = result.split('\n')
   
-  mylist = connectMe('192.168.5.122', '22', 'em', 'bubble-sortq')
+  mylist = connectMe('testip', 'testport', 'testuser', 'testpass')
   print "\n\n My List: \n\n"
   listcode = mylist[0].split()
   listresult =mylist[1].split()

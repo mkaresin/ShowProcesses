@@ -3,7 +3,8 @@
 
 {% block content %}
     <h1>Enter Servers IP address and credentials</h1>
-  <form action="/results" method="POST">
+
+  <form id="userform" action="/results" method="POST" onsubmit="showdiv()">
   <fieldset>
   <legend>SSH Remote machine and show processes:</legend>
   Server IP:<br>
@@ -16,5 +17,10 @@
   <input type="submit" value="Submit">
   </fieldset>
   </form>
+  <div id="loading" class="centered"><div class="loader"></div></div>
+
+<script language="javascript" type="text/javascript">
+     function showdiv() { document.getElementById("loading").style.display="block"; }
+</script>
     
 {% endblock %}

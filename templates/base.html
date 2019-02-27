@@ -15,4 +15,18 @@
         <hr>
         {% block content %}{% endblock %}
     </body>
+    
+
+    <script type="text/javascript">
+      function showHide() {
+        var x = document.getElementByID("userform");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } 
+        else {
+          x.style.display = "none";
+        }
+      }       
+
+    </script>
 </html>
